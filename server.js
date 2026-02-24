@@ -16,7 +16,9 @@ app.post("/api/getStreamUrl", (req, res) => {
     streamUrl: `https://your-video-host.com/${contentId}`
   });
 });
-
+app.get("/ping", (req, res) => {
+  res.json({ status: "ok", message: "Riverlight+ backend is alive" });
+});
 app.listen(process.env.PORT || 8080, () => {
   console.log("Backend running");
 });
