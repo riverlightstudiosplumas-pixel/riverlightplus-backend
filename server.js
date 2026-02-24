@@ -19,6 +19,9 @@ app.post("/api/getStreamUrl", (req, res) => {
 app.get("/ping", (req, res) => {
   res.json({ status: "ok", message: "Riverlight+ backend is alive" });
 });
+app.listen(port, () => {
+  console.log(`Backend running on port ${port}`);
+});
 app.listen(process.env.PORT || 8080, () => {
   console.log("Backend running");
 });
