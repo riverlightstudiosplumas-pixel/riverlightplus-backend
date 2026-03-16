@@ -1,0 +1,74 @@
+/* ----------------------------- */
+/* 1. Reset                      */
+/* ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------------------- */
+/* 2. Global Theme               */
+/* ----------------------------- */
+:root {
+  --bg: #0d0d0d;
+  --bg-alt: #111;
+  --text: #f2f2f2;
+  --text-dim: #c4c4c4;
+  --accent: #e63946; /* placeholder accent color */
+  --radius: 6px;
+  --space: 20px;
+  --max-width: 900px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----------------------------- */
+/* 3. Layout                     */
+/* ----------------------------- */
+.site-header,
+.site-footer {
+  background: var(--bg-alt);
+  padding: var(--space);
+  border-bottom: 1px solid #222;
+}
+
+.site-footer {
+  border-top: 1px solid #222;
+  border-bottom: none;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.content {
+  flex: 1;
+  padding: calc(var(--space) * 2) var(--space);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ----------------------------- */
+/* 4. Components                 */
+/* ----------------------------- */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.welcome h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.welcome p {
+  color: var(--text-dim);
+}
